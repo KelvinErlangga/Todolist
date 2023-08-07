@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Example</title>
+</head>
+<body>
+    <form onsubmit="return checkForm()">
+        <label for="field">Nama:</label>
+        <input type="text" id="field" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function checkForm() {
+            var inputField = document.getElementById("field");
+            if (inputField.value.trim() === "") {
+                alert("Fill this field");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
